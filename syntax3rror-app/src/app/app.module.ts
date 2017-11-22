@@ -10,8 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 
 const appRoutes = [
-  { path: '', component: HomeComponent},
-  { path: 'admin', component: AdminComponent},
+  { path: '', component: HomeComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'about/:name', component: AboutComponent },
 ];
 
 @NgModule({

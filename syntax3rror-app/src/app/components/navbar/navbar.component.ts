@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   SiteTitle = 'Syntax3rror Job Request';
+  names: string[] = ['Athos', 'Porthos', 'Aramis', 'd\'Artagnan'];
 
   constructor() { }
 
