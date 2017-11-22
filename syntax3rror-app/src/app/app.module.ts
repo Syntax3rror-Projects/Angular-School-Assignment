@@ -8,11 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-<<<<<<< HEAD
 import { AboutComponent } from './components/about/about.component';
-=======
 import { RequestFormComponent } from './components/request-form/request-form.component';
->>>>>>> d860528d86546e2be9c682a82451b0801c3fcdb2
 
 const appRoutes = [
   { path: '', component: HomeComponent },
@@ -27,11 +24,8 @@ const appRoutes = [
     AdminComponent,
     FooterComponent,
     HomeComponent,
-<<<<<<< HEAD
-    AboutComponent
-=======
+    AboutComponent,
     RequestFormComponent
->>>>>>> d860528d86546e2be9c682a82451b0801c3fcdb2
   ],
   imports: [
     BrowserModule,
