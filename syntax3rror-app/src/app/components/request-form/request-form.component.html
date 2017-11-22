@@ -22,7 +22,7 @@
     <div class="input-group">
       <input class="form-control" formControlName="dateFrom" placeholder="yyyy-mm-dd" ngbDatepicker #dateFrom="ngbDatepicker">
       <button class="input-group-addon" (click)="dateFrom.toggle()" type="button">
-        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+        <fa name="calendar" size="lg" style="cursor: pointer;"></fa>
       </button>
     </div>
   </label>
@@ -31,10 +31,11 @@
     <div class="input-group">
       <input class="form-control" formControlName="dateTo" placeholder="yyyy-mm-dd" ngbDatepicker #dateTo="ngbDatepicker">
       <button class="input-group-addon" (click)="dateTo.toggle()" type="button">
-        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+        <fa name="calendar" size="lg" style="cursor: pointer;"></fa>
       </button>
     </div>
   </label>
+  <button class="btn btn-primary">Save</button>
   <br/> -->
   <pre>{{ requestForm.value | json }}</pre>
 </form>

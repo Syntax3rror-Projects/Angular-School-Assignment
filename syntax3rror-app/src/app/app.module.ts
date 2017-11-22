@@ -34,7 +34,7 @@ const appRoutes = [
   ],
   imports: [
     BrowserModule,
-    NgbModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     AngularFontAwesomeModule,
