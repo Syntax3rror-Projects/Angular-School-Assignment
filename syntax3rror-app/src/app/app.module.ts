@@ -17,11 +17,14 @@ import { AboutComponent } from './components/about/about.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
 
 import { ExpDatabaseService } from './services/exp-database.service';
+import { ListRequestsComponent } from './components/list-requests/list-requests.component';
 
 const appRoutes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'home/:key', component: HomeComponent },
   { path: 'about/:name', component: AboutComponent },
+  { path: 'listrequests', component: ListRequestsComponent },
 ];
 
 @NgModule({
@@ -32,7 +35,8 @@ const appRoutes = [
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    RequestFormComponent
+    RequestFormComponent,
+    ListRequestsComponent
   ],
   imports: [
     BrowserModule,

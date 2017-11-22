@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  key: string;
+
+  constructor( private activatedRoute: ActivatedRoute ) {
+   }
 
   ngOnInit() {
+    this.key = this.activatedRoute.snapshot.params['key'];
   }
 }

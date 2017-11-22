@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let request of requests | async">
+            <td>{{request.name}}</td>
+            <td>{{request.company}}</td>
+            <td>{{request.dateFrom.year}}-{{request.dateFrom.month}}-{{request.dateFrom.day}}</td>
+            <td>{{request.dateTo.year}}-{{request.dateTo.month}}-{{request.dateTo.day}}</td>
+            <td>{{request.title}}</td>
+            <td>{{request.description}}</td>
+            <td>
+              <a [routerLink]="['/home/' ,request.key]">
+                <fa name="pencil" size="lg">
+                </fa>
+              </a>
+            </td>
+            <td class="text-center" style="cursor: pointer;" (click)="deleteRequest(request.key)"><fa name="trash-o" size="lg"></fa></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+        <div class="col" *ngFor="let request of requests | async">
+        <pre>{{request.company | json}}</pre>
+        <pre>{{request.key | json}}</pre>
+      </div>
+    </div>
+  </div>
+</div>

@@ -40,7 +40,8 @@
     </div>
   </label>
   <br/>
-  <button class="btn btn-primary" (click)="saveRequest()">Save</button>
+  <button *ngIf="!key" class="btn btn-primary" (click)="saveRequest()">Save</button>
+  <button *ngIf="key" class="btn btn-primary" (click)="updateRequest()">Update</button>
   <pre>Status: {{ requestForm.status | json }}</pre>
   <pre>Value: {{ requestForm.value | json }}</pre>
 </form>

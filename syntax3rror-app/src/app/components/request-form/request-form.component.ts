@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ExpDatabaseService } from '../../services/exp-database.service';
 
@@ -8,6 +8,8 @@ import { ExpDatabaseService } from '../../services/exp-database.service';
   styleUrls: ['./request-form.component.css']
 })
 export class RequestFormComponent implements OnInit {
+
+  @Input() key: string;
 
   requestForm = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -19,22 +21,31 @@ export class RequestFormComponent implements OnInit {
     dateTo: new FormControl('', Validators.required),
   });
 
-  constructor( private expDbService: ExpDatabaseService ) { }
+  constructor(private expDbService: ExpDatabaseService) { }
 
-  saveRequest(){
+  updateRequest() {
+    this.expDbService.updateRequest(this.key, this.requestForm.value);
+  }
+
+  saveRequest() {
     this.expDbService.saveRequest(this.requestForm.value);
   }
 
   ngOnInit() {
-    this.requestForm.reset({
-      name: 'PuppetMaster',
-      company: 'syntax3rror',
-      email: 'syntax3rrorsolutions@outlook.com',
-      title: 'BoxCore',
-      description: 'BoxPeak-dräparen.',
-      dateFrom: {year: 2017, month: 11, day: 27},
-      dateTo: {year: 2017, month: 12, day: 3 }
-    });
+    if (typeof this.key !== 'undefined') {
+
+      this.expDbService.getRequestByKey(this.key).subscribe(request => {
+        this.requestForm.reset({
+          name: request['name'],
+          company: request['company'],
+          email: request['email'],
+          title: request['title'],
+          description: request['description'],
+          dateFrom: request['dateFrom'],
+          dateTo: request['dateTo']
+        });
+      });
+    }
   }
 
 }
