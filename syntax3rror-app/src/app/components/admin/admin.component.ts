@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ExpDatabaseService } from '../../services/exp-database.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  requests: Observable<any[]>;
+
+  constructor(private expDbService: ExpDatabaseService) { }
 
   ngOnInit() {
+    this.requests = this.expDbService.getRequests();
   }
 
 }

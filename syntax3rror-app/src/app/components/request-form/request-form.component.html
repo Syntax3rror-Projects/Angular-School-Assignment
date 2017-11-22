@@ -5,6 +5,10 @@
       <input class="form-control" formControlName="name">
     </label>
     <br/>
+    <label class="center-block">Company
+      <input class="form-control" formControlName="company">
+    </label>
+    <br/>
     <label class="center-block">E-mail
       <input class="form-control" formControlName="email">
     </label>
@@ -36,6 +40,7 @@
     </div>
   </label>
   <br/>
-  <button class="btn btn-primary">Save</button>
-  <pre>{{ requestForm.value | json }}</pre>
+  <button class="btn btn-primary" (click)="saveRequest()">Save</button>
+  <pre>Status: {{ requestForm.status | json }}</pre>
+  <pre>Value: {{ requestForm.value | json }}</pre>
 </form>

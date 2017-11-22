@@ -1,3 +1,25 @@
-<p>
-  admin works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let request of requests | async">
+      <div class="card" style="width: 20rem;">
+        <div class="image-container">
+          <img class="card-img-top" src="../../assets/cardbackground.png" alt="Card image cap">
+          <h2 class="centered text-center">{{request.name}}</h2>
+          <h4 class="below-center card-title">{{request.company}}</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>From:</strong>
+            {{request.dateFrom.year}}-{{request.dateFrom.month}}-{{request.dateFrom.day}}
+            <strong>To:</strong>
+            {{request.dateTo.year}}-{{request.dateTo.month}}-{{request.dateTo.day}}
+          </li>
+          <li class="list-group-item">
+            <strong>Title:</strong> {{request.title}}</li>
+          <li class="list-group-item">
+            <strong>Description:</strong> {{request.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.image-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered{
+    margin-top: 20px;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.below-center{
+    margin-top: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+img{
+    opacity: 0.8;
+}
