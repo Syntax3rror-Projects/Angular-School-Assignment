@@ -13,7 +13,8 @@ export class RequestFormComponent implements OnInit {
     email: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
-    date: new FormControl('', Validators.required),
+    dateFrom: new FormControl('', Validators.required),
+    dateTo: new FormControl('', Validators.required),
   });
 
   constructor() { }
