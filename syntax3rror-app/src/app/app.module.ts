@@ -37,10 +37,13 @@ const appRoutes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    NgbModule,
+<<<<<<< HEAD
+    NgbModule
+=======
     AngularFontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
+>>>>>>> 40875f98d7320171f6fdc711e1ab634d1df89a36
   ],
   providers: [],
   bootstrap: [AppComponent]
