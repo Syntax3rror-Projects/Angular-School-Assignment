@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule} from 'angular-font-awesome';
@@ -33,6 +34,7 @@ const appRoutes = [
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     AngularFontAwesomeModule,
