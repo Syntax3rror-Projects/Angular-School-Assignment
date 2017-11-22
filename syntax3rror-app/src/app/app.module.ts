@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDataBaseModule, AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -30,7 +33,9 @@ const appRoutes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
