@@ -14,11 +14,10 @@ export class NavbarComponent implements OnInit {
   public isCollapsed = true;
 
   people: Person[] = [
-    { name: 'a', skills: ['', ''] },
-    { name: 'b', skills: ['', ''] },
-    { name: 'c', skills: ['', ''] },
-    { name: 'd', skills: ['', ''] },
-    { name: 'Jesus', skills: ['', ''] },
+    { name: 'Leonardo', skills: ['', ''] },
+    { name: 'Donatello', skills: ['', ''] },
+    { name: 'Rafael', skills: ['', ''] },
+    { name: 'Michaelangular', skills: ['', ''] },
   ];
 
   names = ['a', 'b', 'c'];
