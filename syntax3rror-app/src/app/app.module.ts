@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule} from 'angular-font-awesome';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDataBaseModule, AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ const appRoutes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
