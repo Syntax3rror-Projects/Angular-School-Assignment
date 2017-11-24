@@ -21,12 +21,12 @@ import { ListRequestsComponent } from './components/list-requests/list-requests.
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const appRoutes = [
-  { path: '', component: HomeComponent },
+  { path: 'contact', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'home/:key', component: HomeComponent },
+  { path: 'contact/:key', component: HomeComponent },
   { path: 'about/:name', component: AboutComponent },
   { path: 'listrequests', component: ListRequestsComponent},
-  { path: 'landingpage', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'listrequests', component: ListRequestsComponent },
 
