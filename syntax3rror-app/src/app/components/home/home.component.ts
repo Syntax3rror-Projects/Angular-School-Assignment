@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   key: string;
 
-  helloWorld: string = 'Love';
+  dataToChildComponent: string = 'syntax3rror';
 
   constructor( private activatedRoute: ActivatedRoute ) {
    }

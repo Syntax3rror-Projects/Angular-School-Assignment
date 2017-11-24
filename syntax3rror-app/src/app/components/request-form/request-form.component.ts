@@ -10,9 +10,7 @@ import { ExpDatabaseService } from '../../services/exp-database.service';
 export class RequestFormComponent implements OnInit {
 
   @Input() key: string;
-  @Input() helloWorld: string;
-
-  hello: string = this.helloWorld;
+  @Input() childProp: string;
 
   requestForm = new FormGroup({
     name: new FormControl('', Validators.required),

@@ -1,15 +1,15 @@
-<!-- Header --> 
+<!-- Header -->
 <div class="page-header mt-3">
   <h1>Contact Us</h1>
 </div>
 <p class="lead">Fill out the form below to submit a request</p>
 <hr>
 
-<!-- Form --> 
+<!-- Form -->
 <form [formGroup]="requestForm">
   <div class="row">
 
-    <!-- Column 1: General information --> 
+    <!-- Column 1: General information -->
     <div class="col-sm-6">
       <div class="form-group">
 
@@ -32,7 +32,7 @@
           <input class="form-control" formControlName="title">
         </label>
         <br/>
-        
+
         <label class="center-block">Description
           <textarea class="form-control" formControlName="description" rows="4" cols="30" wrap="virtual"></textarea>
         </label>
@@ -63,13 +63,15 @@
       </label>
 
       <br/>
-      <br>
-      
+      <br/>
+
       <button *ngIf="!key" class="btn btn-primary" (click)="saveRequest()">Save</button>
       <button *ngIf="key" class="btn btn-info" (click)="updateRequest()">Update</button>
+      <br/>
+      <div style="text-align: center; margin: 10px; padding: 5px; border: 1px #999 solid; width: 100px; background: #ccc;">
+        <strong>{{childProp}}</strong>
+      </div>
 
-      <p *ngIf="!helloWorld">false</p>
-      <p *ngIf="helloWorld">{{helloWorld}}</p>
 
     </div>
   </div>
