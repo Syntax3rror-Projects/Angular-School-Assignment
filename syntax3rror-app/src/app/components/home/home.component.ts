@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
 
   key: string;
 
+  helloWorld: string = 'Love';
+
   constructor( private activatedRoute: ActivatedRoute ) {
    }
 

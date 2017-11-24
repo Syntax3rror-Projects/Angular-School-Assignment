@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto header-options">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/">Home
+        <a class="nav-link" routerLink="/">Contact
           <span class="sr-only"></span>
         </a>
       </li>
@@ -16,17 +16,20 @@
         <a class="nav-link" routerLink="/admin">Admin</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" routerLink="/listrequests">Requests</a>
-        </li>
+        <a class="nav-link" routerLink="/listrequests">Requests</a>
+      </li>
       <li ngbDropdown class="nav-item dropdown">
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" [ngbCollapse]="isCollapsed" aria-haspopup="true"
           aria-expanded="false">
           About
         </a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" *ngFor="let person of people" [routerLink]="['/about', person.name]">{{person.name}}</a>
+          <a class="dropdown-item" *ngFor="let person of people" target="_blank" href="{{person.url}}">
+            {{person.name}}
+            <i class="fa fa-external-link pull-right" aria-hidden="true"></i>
+          </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">About Us</a>
+          <a class="dropdown-item" routerLink="/about">About Us</a>
         </div>
       </li>
     </ul>

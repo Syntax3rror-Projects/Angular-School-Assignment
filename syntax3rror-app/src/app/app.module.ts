@@ -26,7 +26,10 @@ const appRoutes = [
   { path: 'home/:key', component: HomeComponent },
   { path: 'about/:name', component: AboutComponent },
   { path: 'listrequests', component: ListRequestsComponent},
-  { path: 'landingpage', component: LandingPageComponent }
+  { path: 'landingpage', component: LandingPageComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'listrequests', component: ListRequestsComponent },
+
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
 export interface Person {
     name: string;
-    skills: string[];
+    url: string;
 }
