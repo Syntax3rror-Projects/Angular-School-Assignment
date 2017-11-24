@@ -34,7 +34,7 @@
         <br/>
         
         <label class="center-block">Description
-          <input class="form-control" formControlName="description">
+          <textarea class="form-control" formControlName="description" rows="4" cols="30" wrap="virtual"></textarea>
         </label>
         <br/>
       </div>
@@ -75,6 +75,4 @@
   </div>
 
   <br/>
-  <pre>Status: {{ requestForm.status | json }}</pre>
-  <pre>Value: {{ requestForm.value | json }}</pre>
 </form>

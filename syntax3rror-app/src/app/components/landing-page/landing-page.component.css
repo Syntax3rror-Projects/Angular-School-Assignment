@@ -6,12 +6,17 @@
     height: 100%;
 }
 .announcement{
-    border:solid lightblue;
+    border:1px #ccc solid;;
     border-radius: 0.01px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .announcement-text{
     font-family:  "Times New Roman", Times, serif;
 }
 .bc-ads{
  
+}
+.landing-image{
+    padding: 0 !important;
 }
