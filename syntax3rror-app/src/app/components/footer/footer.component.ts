@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  adressFields: string[] = ['Syntax3rror', 'Adressvägen 18', '128 95 Stockholm'];
+  adressFields: string[] = ['syntax3rror', 'Adressvägen 18', '128 95 Stockholm'];
   constructor() { }
 
   ngOnInit() {

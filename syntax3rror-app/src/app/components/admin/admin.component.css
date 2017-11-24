@@ -1,3 +1,33 @@
+.card{
+    border: 1px #999 solid !important;
+}
+
+.card .list-group-item{
+    background: #eee;
+}
+
+.card th, .card td, .card-img-top{
+    border: 1px #ccc solid !important;
+}
+
+.card th{
+    background: rgb(248, 247, 247);
+}
+
+.card td{
+    background: #fff;
+}
+
+#card-description{
+    text-align: left !important;
+    white-space: pre-line !important;
+}
+
+
+.card-table{
+    margin: 0 !important;
+}
+
 .image-container{
     position: relative;
     text-align: center;
@@ -19,8 +49,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
-
-img{
-    opacity: 0.8;
 }

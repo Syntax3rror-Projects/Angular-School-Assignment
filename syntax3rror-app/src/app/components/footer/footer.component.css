@@ -1,0 +1,19 @@
+.footer{
+    border: 1px #ccc solid;
+    vertical-align: auto;
+    background: #eee;
+    color: black;
+    position: relative;
+    bottom: 0;
+    height: 15vh;
+    width: 100%;
+}
+
+.footer-contact{
+    font-weight: bold;
+}
+
+.footer-contact-info{
+    font-size: 14px;
+    font-weight: lighter;
+}
