@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  cssClass: string = 'offline';
+
   constructor() { }
 
   ngOnInit() {

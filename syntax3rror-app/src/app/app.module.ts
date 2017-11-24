@@ -23,7 +23,7 @@ const appRoutes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'home/:key', component: HomeComponent },
-  { path: 'about/:name', component: AboutComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'listrequests', component: ListRequestsComponent },
 ];
 

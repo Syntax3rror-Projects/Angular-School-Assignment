@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Person} from '../../models/person';
+import { Person } from '../../models/person';
 
 @Component({
   selector: 'app-navbar',
@@ -14,13 +14,11 @@ export class NavbarComponent implements OnInit {
   public isCollapsed = true;
 
   people: Person[] = [
-    { name: 'Leonardo', skills: ['', ''] },
-    { name: 'Donatello', skills: ['', ''] },
-    { name: 'Rafael', skills: ['', ''] },
-    { name: 'Michaelangular', skills: ['', ''] },
+    { name: 'Housame', url: 'https://www.linkedin.com/in/housame-oueslati-b1249874' },
+    { name: 'Jimmy', url: 'https://se.linkedin.com/in/jimmy-waern-55916841' },
+    { name: 'Mauricio', url: 'https://se.linkedin.com/in/mauricio-ludwig-987ba9135' },
+    { name: 'Tommy', url: 'https://en.wikipedia.org/wiki/Fibonacci' },
   ];
-
-  names = ['a', 'b', 'c'];
 
   constructor() { }
 
