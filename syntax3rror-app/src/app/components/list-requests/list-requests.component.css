@@ -1,4 +1,32 @@
-a > fa {
-    color: black !important;
+#table-edit {
+    color: blue !important;
     text-decoration: none;
+}
+
+#table-trash {
+    color: red !important;
+    text-decoration: none;
+}
+
+.request-table th{
+    background: #ddd;
+    background: rgb(245, 244, 244);
+    border: 1px #ccc solid;
+    font-size: 14px;
+}
+
+.request-table td{
+    background: white;
+    border: 1px #ccc solid;
+    font-size: 12px;
+}
+
+.request-date-table td{
+    border: none !important;
+    padding: 0 !important;
+}
+
+#request-date-table-span{
+    padding-left: 5px;
+    padding-right: 5px;
 }

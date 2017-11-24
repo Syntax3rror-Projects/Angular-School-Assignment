@@ -1,23 +1,53 @@
-<div class="container">
+<div class="container pb-5">
   <div class="row">
     <div class="col" *ngFor="let request of requests | async">
-      <div class="card" style="width: 20rem;">
+      <div class="card mt-5" style="width: 20rem;">
         <div class="image-container">
-          <img class="card-img-top" src="../../assets/cardbackground.png" alt="Card image cap">
+          <img class="card-img-top" src="../../assets/cardbackground.png" alt="Job request">
           <h2 class="centered text-center">{{request.name}}</h2>
           <h4 class="below-center card-title">{{request.company}}</h4>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <strong>From:</strong>
-            {{request.dateFrom.year}}-{{request.dateFrom.month}}-{{request.dateFrom.day}}
-            <strong>To:</strong>
-            {{request.dateTo.year}}-{{request.dateTo.month}}-{{request.dateTo.day}}
+            <table class="card-table table table-bordered">
+              <tr>
+                <th>
+                  <strong>From:</strong>
+                </th>
+                <th>
+                  <strong>To:</strong>
+                </th>
+              </tr>
+              <tr>
+                <td>{{request.dateFrom.year}}-{{request.dateFrom.month}}-{{request.dateFrom.day}}</td>
+                <td>{{request.dateTo.year}}-{{request.dateTo.month}}-{{request.dateTo.day}}</td>
+              </tr>
+            </table>
           </li>
-          <li class="list-group-item">
-            <strong>Title:</strong> {{request.title}}</li>
-          <li class="list-group-item">
-            <strong>Description:</strong> {{request.name}}</li>
+          <li class="list-group-item form-group">
+            <strong>Title:</strong>
+            <br/>
+            <span class="form-control">{{request.title}}</span>       
+          </li>
+          <li class="list-group-item form-group">
+            <strong>E-mail:</strong>
+            <br/>
+            <span class="form-control">{{request.email}}</span>   
+          </li>
+          <li class="list-group-item form-group">
+            <strong>Title:</strong>
+            <br/>
+            <span class="form-control">{{request.title}}</span>   
+          </li>
+          <li class="list-group-item form-group">
+            <label>
+              <strong>Description:</strong>
+            </label>
+            <br/>
+            <div class="form-group">
+                <textarea id="card-description" class="form-control" rows="4" cols="36" wrap="virtual">{{request.description}}</textarea>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
