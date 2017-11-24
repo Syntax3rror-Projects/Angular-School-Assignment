@@ -29,7 +29,13 @@ export class RequestFormComponent implements OnInit {
   }
 
   saveRequest() {
-    this.expDbService.saveRequest(this.requestForm.value);
+    if (this.requestForm.valid) {
+      this.expDbService.saveRequest(this.requestForm.value);
+      this.requestForm.reset();
+    }
+    else {
+      alert("syntax3rror!");
+    }
   }
 
   ngOnInit() {
