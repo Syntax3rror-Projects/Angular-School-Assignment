@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  cssClass: string = 'offline';
+  cssClass: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.cssClass = 'online';
+    setTimeout(() => {
+      this.cssClass = 'offline';
+    }, 3000);
   }
 
 }
