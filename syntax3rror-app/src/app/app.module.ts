@@ -18,13 +18,15 @@ import { RequestFormComponent } from './components/request-form/request-form.com
 
 import { ExpDatabaseService } from './services/exp-database.service';
 import { ListRequestsComponent } from './components/list-requests/list-requests.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const appRoutes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'home/:key', component: HomeComponent },
   { path: 'about/:name', component: AboutComponent },
-  { path: 'listrequests', component: ListRequestsComponent },
+  { path: 'listrequests', component: ListRequestsComponent},
+  { path: 'landingpage', component: LandingPageComponent }
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const appRoutes = [
     HomeComponent,
     AboutComponent,
     RequestFormComponent,
-    ListRequestsComponent
+    ListRequestsComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
